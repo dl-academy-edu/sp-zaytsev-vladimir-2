@@ -1,43 +1,133 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link href="style.css" rel="stylesheet" />
-    <link href="/common.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
-    <link rel="stylesheet" href="/static/fonts/oswald.css" />
-    <link rel="shortcut icon" href="/static/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="/common.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <title>Главная</title>
   </head>
   <body>
     @@include('header/index.html')
     <main class="index-main">
-      <div class="container">
-        <h1 class="title-block title-block_one">Главная</h1>
-        <h2 class="title-block title-block_two">
-          Вы находитесь на главной странице
-        </h2>
-        <div class="parallax-card">
-          <div class="parallax-card__wrapper-img">
-            <img
-              class="parallax-card__img"
-              src="static/images/cactus.jpg"
-              alt="Картинка кактуса"
-            />
-          </div>
-
-          <div class="parallax-card__description">
-            <p class="parallax-card__paragraph">Кактус маминой подруги</p>
-            <p class="parallax-card__paragraph">
-              Не нужно поливать и никогда не сохнет
-            </p>
-          </div>
+      <section class="main-sliders container">
+        <div class="slider-block">
+          <div class="slider-control">
+            <p class="slider-control-number">01</p>
+            <ul class="sliders-buttons-list list-hidden-marker">
+              <li class="slider-button-item"><button class="slider-button slider-button__one"></button></li>
+              <li class="slider-button-item"><button class="slider-button"></button></li>
+              <li class="slider-button-item"><button class="slider-button"></button></li>
+              <li class="slider-button-item"><button class="slider-button"></button></li>
+            </ul>
+          </div>          
+          <div class="slider-wrapper">
+            <div class="slider-1">
+              <div class="slider-desc">
+                <p class="slider-title">THE OOH NOO COLLECTION</p>
+                <p class="slider-text">Disagned in Slovenia</p>
+                <button class="slider-link button slider-link_js">EXPLORE NOW</button>
+              </div>          
+              <h2 class="hidden">Slider</h2>          
+              <img class="slider-image" src="static/images/slider.png" alt="slider">          
+            </div>        
+            <!--<div class="slider-2">
+              <h2 class="hidden">Slider</h2>
+              <p class="slider-title">THE OOH NOO <br> COLLECTION</p>
+              <span class="slider-text">Disagned in Slovenia</span>
+              <a class="slider-link button" href="#">EXPLORE NOW</a>
+              <img class="slider-image" src="slider.png" alt="slider">          
+            </div>
+            <div class="slider-3">
+              <h2 class="hidden">Slider</h2>
+              <p class="slider-title">THE OOH NOO <br> COLLECTION</p>
+              <span class="slider-text">Disagned in Slovenia</span>
+              <a class="slider-link button" href="#">EXPLORE NOW</a>
+              <img class="slider-image" src="slider.png" alt="slider">          
+            </div>
+            <div class="slider-4">
+              <h2 class="hidden">Slider</h2>
+              <p class="slider-title">THE OOH NOO <br> COLLECTION</p>
+              <span class="slider-text">Disagned in Slovenia</span>
+              <a class="slider-link button" href="#">EXPLORE NOW</a>
+              <img class="slider-image" src="slider.png" alt="slider">          
+            </div>-->          
+          </div> 
         </div>
+        <p class="slider-discount-text">Free (continental) USA shipping on all orders of $100 USD or more!</p>        
+      </section>
+      <section class="products container">
+        <h2 class="products-title title-2">CATEGORY PRODUCTS</h2>
+        <ul class="products-list list-hidden-marker">
+          <li class="product-item">
+            <a class="product-link" href="#">
+              <img class="product-image" width="280" height="270" src="static/images/product-1.jpg" alt="APPAREL KIDS">
+              <h3 class="product-title">APPAREL KIDS</h3>
+            </a>
+          </li>
+          <li class="product-item">
+            <a class="product-link" href="#">
+              <img class="product-image" width="280" height="270" src="static/images/product-2.jpg" alt="HOLIDAY SHOP">
+              <h3 class="product-title">HOLIDAY SHOP </h3>
+            </a>
+          </li>
+          <li class="product-item">
+            <a class="product-link" href="pages/toys/index.html">
+              <img class="product-image" width="280" height="270" src="static/images/product-3.jpg" alt="TOYS">
+              <h3 class="product-title">TOYS</h3>
+            </a>
+          </li>
+          <li class="product-item">
+            <a class="product-link" href="#">
+              <img class="product-image" width="280" height="270" src="static/images/product-4.jpg" alt="ACCESSORIES">
+              <h3 class="product-title">ACCESSORIES</h3>
+            </a>
+          </li>
+        </ul>
+        <div class="desception">
+          <button class="desception-button"><img class="desception-vector" width="37" height="37" src="static/images/vector-1.svg" alt="vector"></button>
+          <button class="desception-button"><img class="desception-vector" width="37" height="37" src="static/images/vector-2.svg" alt="vector"></button>
+          <p class="desception-text">Modern finds for the modern home. Curated goods by unique designers around the world from fashion to furniture for kids and adults.</p>
+        </div>  
+      </section>
+      <section class="delivery container">        
+        <img class="delivery-image" width="480" height="559" src="static/images/delivery.png" alt="delivery">
+        <div class="delivery-text-block">
+          <h2 class="delivery-title title-2">DELIVERY</h2>        
+          <ul class="delivery-list list-hidden-marker">
+            <li class="delivery-item"><button class="delivery-button delivery-button__default">Delivery</button></li>
+            <li class="delivery-item"><button class="delivery-button">Guarantee</button></li>
+            <li class="delivery-item"><button class="delivery-button">Credit</button></li>
+          </ul> 
+          <p class="delivery-text">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
+          <p class="delivery-text">What started as an outlet to deal  with the traumatic loss of my husband, dlk has now become a truly happy place for me and i have you and all of the beautiful designers that we work with to thank!</p>
+          <a class="delivery-link button" href="#">LEARN MORE</a>
+        </div>        
+      </section>
+      <section class="partners container">
+        <h2 class="hidden">Partners</h2>
+        <ul class="partners-list list-hidden-marker">
+          <li class="partner-item"><a class="partner-link" href="#"><img class="parnters-image" src="static/images/partner-1.png" width="193" height="60" alt="mail"></a></li>
+          <li class="partner-item"><a class="partner-link" href="#"><img class="parnters-image" src="static/images/partner-2.png" width="179" height="61" alt="apple"></a></li>
+          <li class="partner-item"><a class="partner-link" href="#"><img class="parnters-image" src="static/images/partner-3.png" width="216" height="46" alt="eltex"></a></li>
+          <li class="partner-item"><a class="partner-link" href="#"><img class="parnters-image" src="static/images/partner-4.png" width="211" height="40" alt="owox"></a></li>
+        </ul>
+      </section>
+      <div class="dlk-contact container">        
+        <article class="dlk-about">
+          <h1 class="dlk-title title-2">DESIGN LIFE KIDS</h1>
+          <h3 class="dlk-subtitle">About Us</h3>
+          <p class="dlk-about-text">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
+          <a class="dlk-about-link button" href="#">BUY NOW</a>
+        </article>
+        <article class="contacts-map">
+          <h2 class="contacts-title title-2">CONTACTS</h2>
+          <p class="contacts-map-text">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
+          <img class="contatcs-map-image" width="483" height="196" src="static/images/map.png" alt="map">
+        </article>
       </div>
     </main>
     @@include('footer/index.html')
+    @@include('popap/index.html')    
   </body>
   <script src="script.js"></script>
 </html>

@@ -1,0 +1,22 @@
+.button {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  background-color: #000000;
+  color: #FFFFFF;
+  border: 0;
+  padding: 9px 22px;  
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover, .button:focus {  
+  background-color: #C29974; 
+}
+
+.button:active {
+  cursor: none;
+  background-color:#CFAF91;
+}

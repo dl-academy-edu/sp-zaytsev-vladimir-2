@@ -1,0 +1,30 @@
+
+
+<div class="modal-form modal-form_none modal-form_js">
+  <form class="contact-us-form modal-window" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
+    <div class="form-wrapper600">
+      <label class="label-input" for="input-name">Name</label>
+      <input class="form-input form-input__name form-input_js" name="name" id="input-name" type="text" placeholder="Ivan Ivanov">
+    </div>
+    <div class="form-container">
+      <div class="form-wrapper290">
+        <label class="label-input" for="input-phone">Phone</label>
+        <input class="form-input" name="phone" id="input-phone" type="tel">
+      </div>
+      <div class="form-wrapper290">
+        <label class="label-input" for="input-email">Email</label>
+        <input class="form-input" name="email" id="input-email" type="email">
+      </div>
+    </div>          
+    <div class="form-wrapper600"> 
+      <label class="label-input" for="input-massage">Massage</label>
+      <textarea class="form-input" name="message" id="input-massage" cols="30" rows="6"></textarea>
+    </div>
+    <div class="form-checkbox-wrapper">
+      <input class="input-form-checkbox opacity" name="accept" id="form-accept" type="checkbox" value="accept">
+      <label class="form-label form-checkbox-indicator" for="form-accept">By clicking on the button, you consent to the processing of your personal data</label>
+    </div>
+    <button disabled class="button-form button" type="submit">Submit</button>
+    <button class="button-close button-close_js" type="button"><span class="hidden">Close window</span></button>
+  </form>
+</div>
