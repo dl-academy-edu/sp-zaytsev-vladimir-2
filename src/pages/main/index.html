@@ -8,7 +8,7 @@
   </head>
   <body>
     @@include('header/index.html')
-    <main class="index-main">
+    <main class="main">
       <section class="main-sliders container">
         <div class="slider-block">
           <div class="slider-control">
@@ -25,7 +25,10 @@
               <div class="slider-desc">
                 <p class="slider-title">THE OOH NOO COLLECTION</p>
                 <p class="slider-text">Disagned in Slovenia</p>
-                <button class="slider-link button slider-link_js">EXPLORE NOW</button>
+                @@include('button/index.html', {
+                  "text": "EXPLORE NOW",
+                  "class": "slider-link slider-link_js"
+                })
               </div>          
               <h2 class="hidden">Slider</h2>          
               <img class="slider-image" src="static/images/slider.png" alt="slider">          
@@ -100,7 +103,10 @@
           </ul> 
           <p class="delivery-text">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
           <p class="delivery-text">What started as an outlet to deal  with the traumatic loss of my husband, dlk has now become a truly happy place for me and i have you and all of the beautiful designers that we work with to thank!</p>
-          <a class="delivery-link button" href="#">LEARN MORE</a>
+          @@include('link/index.html', {
+            "text": "LEARN MORE",
+            "class": "delivery-link"
+          })
         </div>        
       </section>
       <section class="partners container">
@@ -117,7 +123,10 @@
           <h1 class="dlk-title title-2">DESIGN LIFE KIDS</h1>
           <h3 class="dlk-subtitle">About Us</h3>
           <p class="dlk-about-text">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
-          <a class="dlk-about-link button" href="#">BUY NOW</a>
+          @@include('link/index.html', {
+            "text": "BUY NOW",
+            "class": "dlk-about-link"
+          })
         </article>
         <article class="contacts-map">
           <h2 class="contacts-title title-2">CONTACTS</h2>
@@ -127,7 +136,7 @@
       </div>
     </main>
     @@include('footer/index.html')
-    @@include('popap/index.html')    
+    @@include('popap/index.html')   
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>
