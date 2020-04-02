@@ -2,38 +2,39 @@ let gulp = require("gulp"),
   sass = require("gulp-sass"),
   autoprefixer = require("gulp-autoprefixer"),
   cleanCSS = require("gulp-clean-css"),
+  babel = require("gulp-babel"),
   uglify = require("gulp-uglify"),
-  concat = require("gulp-concat"),
   del = require("del"),
   browserSync = require("browser-sync"),
   fileinclude = require("gulp-file-include"),
-  fs = require("fs"),
+  fs = require("fs-extra"),
   path = require("path");
 
 sass.compiler = require("node-sass"); // Переназначаем компилирование
 
-// Функция удаление файлов
-async function clean() {
-  await del(["./build/*"]);
-}
+// Название build папки
+const finalFolder = "build";
+
 // Функция обработки html файлов
-async function html(src, dest) {
-  return await gulp
+function html(src, dest) {
+  return gulp
     .src(src)
     .pipe(
       fileinclude({
         prefix: "@@",
-        basepath: path.join(__dirname, "src/components")
+        basepath: "./src/components"
+      }).on("error", function(error) {
+        console.error(error);
       })
     )
     .pipe(gulp.dest(dest))
     .pipe(browserSync.reload({ stream: true }));
 }
 // Функция обработки scss файлов
-async function scss(src, dest) {
-  return await gulp
+function scss(src, dest) {
+  return gulp
     .src(src)
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass().on("error", sass.logError))
     .pipe(
       autoprefixer({
         cascade: false
@@ -48,10 +49,14 @@ async function scss(src, dest) {
     .pipe(browserSync.reload({ stream: true }));
 }
 // Функция обработки js файлов
-async function js(src, dest) {
-  return await gulp
+function js(src, dest) {
+  return gulp
     .src(src)
-    .pipe(concat("script.js"))
+    .pipe(
+      babel({
+        presets: ["@babel/env"]
+      })
+    )
     .pipe(
       uglify({ toplevel: true }).on("error", function() {
         this.emit("end");
@@ -61,68 +66,70 @@ async function js(src, dest) {
     .pipe(browserSync.reload({ stream: true }));
 }
 // Функция обработки шрифтов
-async function fonts(src, dest) {
-  return await gulp
-    .src(src)
-    .pipe(gulp.dest(dest))
-    .pipe(browserSync.reload({ stream: true }));
+function fonts(src, dest) {
+  fs.mkdirSync(dest, {recursive: true});
+  fs.copy(src, dest);
+  // TODO: нужно сделать оптимизацию шрифтов
 }
 // Функция обработки картинок
-async function img(src, dest) {
-  return await gulp
-    .src(src)
-    .pipe(gulp.dest(dest))
-    .pipe(browserSync.reload({ stream: true }));
+function img(src, dest) {
+  fs.mkdirSync(dest, {recursive: true});
+  fs.copy(src, dest);
+  // TODO: нужно сделать оптимизацию картинок
 }
 
 // Функция сборки проекта
 async function buildProject() {
+  // Очистка папки "build"
+  await del([`./${finalFolder}/*`]);
+
   // Обработка всех страниц (html, scss, js)
-  const arrayPages = fs.readdirSync(path.join(__dirname, "src/pages"));
+  const arrayPages = fs.readdirSync("./src/pages");
   let pathBuild = "";
   for (let folder of arrayPages) {
-    if (folder === "main") {
-      pathBuild = "build";
-    } else {
-      pathBuild = `build/pages/${folder}`;
+    folder === "main"
+      ? (pathBuild = `./${finalFolder}`)
+      : (pathBuild = `./${finalFolder}/pages/${folder}`);
+
+    const pathFolder = `./src/pages/${folder}`;
+    for (let file of fs.readdirSync(pathFolder)) {
+      const fileName = `./${pathFolder}/${file}`;
+
+      switch (path.extname(fileName)) {
+        case ".html":
+          html(fileName, pathBuild);
+          break;
+        case ".scss":
+          scss(fileName, pathBuild);
+          break;
+        case ".js":
+          js(fileName, pathBuild);
+          break;
+      }
     }
-    await html(
-      path.join(__dirname, `src/pages/${folder}/index.html`),
-      path.join(__dirname, `${pathBuild}`)
-    );
-    await scss(
-      path.join(__dirname, `src/pages/${folder}/style.scss`),
-      path.join(__dirname, `${pathBuild}`)
-    );
-    await js(
-      path.join(__dirname, `src/pages/${folder}/index.js`),
-      path.join(__dirname, `${pathBuild}`)
-    );
   }
 
   // Обработка стилей компонентов
-  await scss("./src/components/common.scss", "./build");
+  scss("./src/components/common.scss", `./${finalFolder}`);
   // Обработка картинок
-  await img("./src/static/images/**/*", "./build/static/images");
+  img("./src/static/images", `./${finalFolder}/static/images`);
   // Обработка шрифтов
-  await fonts("./src/static/fonts/**/*", "./build/static/fonts");
+  fonts("./src/static/fonts", `./${finalFolder}/static/fonts`);
 }
 
 // Функция которая слушает изменения файлов в проекте
-async function watch() {
+function watch() {
   browserSync.init({
     server: {
-      baseDir: "./build"
+      baseDir: `./${finalFolder}`
     }
   });
   // При изменении любого типа файлов пересобрать проект
   gulp.watch("./src/**/*.*", buildProject);
 }
-
-gulp.task("buildProject", buildProject);
 gulp.task("watch", watch);
 
 // Сборка проекта
-gulp.task("build", gulp.series(clean, buildProject));
+gulp.task("build", buildProject);
 // Режим разработки
 gulp.task("start", gulp.series("build", "watch"));

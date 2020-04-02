@@ -10,50 +10,46 @@
   </head>
   <body>
     @@include('header/index.html')
-    <main class="main">
-      <section class="title-block container">
-        <h1 class="catalog-title main-title">CATEGORY PRODUCTS</h1>
-        <ul class="breadcrumbs-list list-hidden-marker">
-          <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="/index.html">Home</a></li>
-          <li class="breadcrumbs-item"><img class="way-vector" width="8" height="12" src="/static/images/vector-way.svg" alt="vector"></li>
-          <li class="breadcrumbs-item"><span class="breadcrumbs-page">Catalog</span></li>
-        </ul>
-      </section>      
-      <section class="catalog-products container">
+    <main class="catalog">
+      @@include('breadcrumbs/index.html', {
+        "title":"Category Products",
+        "way": "Catalog"
+      })         
+      <section class="catalog-product container">
         <h2 class="hidden">category</h2>
-        <ul class="catalog-list products-list list-hidden-marker">
-          <li class="product-item catalog-item"><a class="product-link" href="#">
-            <img class="product-image" width="280" height="270" src="/static/images/product-1.jpg" alt="APPAREL KIDS">
-            <h3 class="product-title">APPAREL KIDS</h3></a>
+        <ul class="catalog-product__list list-hidden-marker">
+          <li class="catalog-product__item"><a class="catalog-product__link" href="#">
+            <img class="catalog-product__image" width="280" height="270" src="/static/images/product-1.jpg" alt="APPAREL KIDS">
+            <h3 class="catalog-product__name">APPAREL KIDS</h3></a>
           </li>
-          <li class="product-item catalog-item"><a class="product-link" href="#">
-            <img class="product-image" width="280" height="270" src="/static/images/product-2.jpg" alt="HOLIDAY SHOP">
-            <h3 class="product-title">HOLIDAY SHOP </h3></a>
+          <li class="catalog-product__item"><a class="catalog-product__link" href="#">
+            <img class="catalog-product__image" width="280" height="270" src="/static/images/product-2.jpg" alt="HOLIDAY SHOP">
+            <h3 class="catalog-product__name">HOLIDAY SHOP </h3></a>
           </li>
-          <li class="product-item catalog-item"><a class="product-link" href="/pages/toys/index.html">
-            <img class="product-image" width="280" height="270" src="/static/images/product-3.jpg" alt="TOYS">
-            <h3 class="product-title">TOYS</h3></a>
+          <li class="catalog-product__item"><a class="catalog-product__link" href="/pages/toys/index.html">
+            <img class="catalog-product__image" width="280" height="270" src="/static/images/product-3.jpg" alt="TOYS">
+            <h3 class="catalog-product__name">TOYS</h3></a>
           </li>
-          <li class="product-item catalog-item"><a class="product-link" href="#">
-            <img class="product-image" width="280" height="270" src="/static/images/product-4.jpg" alt="ACCESSORIES">
-            <h3 class="product-title">ACCESSORIES</h3></a>
+          <li class="catalog-product__item"><a class="catalog-product__link" href="#">
+            <img class="catalog-product__image" width="280" height="270" src="/static/images/product-4.jpg" alt="ACCESSORIES">
+            <h3 class="catalog-product__name">ACCESSORIES</h3></a>
           </li>
-          <li class="product-item catalog-item"><a class="product-link" href="#">
-            <img class="product-image" width="280" height="270" src="/static/images/product-5.jpg" alt="SALE">
-            <h3 class="product-title">SALE</h3></a>
+          <li class="catalog-product__item"><a class="catalog-product__link" href="#">
+            <img class="catalog-product__image" width="280" height="270" src="/static/images/product-5.jpg" alt="SALE">
+            <h3 class="catalog-product__name">SALE</h3></a>
           </li>
-          <li class="product-item catalog-item"><a class="product-link" href="#">
-            <img class="product-image" width="280" height="270" src="/static/images/product-6.jpg" alt="APPAREL ADULTS">
-            <h3 class="product-title">APPAREL ADULTS</h3></a>
+          <li class="catalog-product__item"><a class="catalog-product__link" href="#">
+            <img class="catalog-product__image" width="280" height="270" src="/static/images/product-6.jpg" alt="APPAREL ADULTS">
+            <h3 class="catalog-product__name">APPAREL ADULTS</h3></a>
           </li>
         </ul>
       </section>
-      <section class="product-desception container">
-        <div class=" product-desception__inner">
-          <h2 class="desc-title title-2">Product Description</h2>
-          <p class="desc-text">Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.</p>
-          <p class="desc-text">A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.</p>
-          <p class="desc-text">The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.</p>
+      <section class="catalog-desception container">
+        <div class="catalog-desception__inner">
+          <h2 class="catalog-desception__title title-2">Product Description</h2>
+          <p class="catalog-desception__text">Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.</p>
+          <p class="catalog-desception__text">A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.</p>
+          <p class="catalog-desception__text">The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.</p>
         </div>
       </section>
     </main>

@@ -1,0 +1,30 @@
+
+
+<div class="popup popup_none popup_js">
+  <form class="popup-form" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
+    <div class="popup-form__wrapper">
+      <label class="popup-form__label" for="input-name">Name</label>
+      <input class="popup-form__input popup-form_js" name="name" id="input-name" type="text">
+    </div>
+    <div class="popup-form__container">
+      <div class="popup-form__wrapper-column">
+        <label class="popup-form__label" for="input-phone">Phone</label>
+        <input class="popup-form__input" name="phone" id="input-phone" type="tel">
+      </div>
+      <div class="popup-form__wrapper-column">
+        <label class="popup-form__label" for="input-email">Email</label>
+        <input class="popup-form__input" name="email" id="input-email" type="email">
+      </div>
+    </div>          
+    <div class="popup-form__wrapper"> 
+      <label class="popup-form__label" for="input-massage">Massage</label>
+      <textarea class="popup-form__input" name="message" id="input-massage" cols="30" rows="6"></textarea>
+    </div>
+    <div class="popup-form__wrapper-checkbox">
+      <input class="popup-form__input-checkbox opacity" name="accept" id="form-accept" type="checkbox" value="accept">
+      <label class="popup-form__label popup-form__label_indicator" for="form-accept">By clicking on the button, you consent to the processing of your personal data</label>
+    </div>
+    <button disabled class="popup-form__button-form button" type="submit">Submit</button>
+    <button class="popup-form__button-close popup-form__button-close_js" type="button"><span class="hidden">Close window</span></button>
+  </form>
+</div>

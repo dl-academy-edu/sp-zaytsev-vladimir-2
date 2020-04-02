@@ -11,45 +11,41 @@
   </head>
   <body>
     @@include('header/index.html')
-    <main class="contact-us-block">
-      <section class="title-block container">
-        <h1 class="contact-us-title main-title">CONTACT US</h1>
-        <ul class="breadcrumbs-list list-hidden-marker">
-          <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="/index.html">Home</a></li>
-          <li class="breadcrumbs-item"><img class="way-vector" width="8" height="12" src="/static/images/vector-way.svg" alt="vector"></li>
-          <li class="breadcrumbs-item"><span class="breadcrumbs-page">Contact Us</span></li>
-        </ul>
-      </section>      
-      <div class="contact-us-block-content container">
+    <main class="contact-us">
+      @@include('breadcrumbs/index.html', {
+        "title": "Contact Us",
+        "way": "Contact Us"
+      })    
+      <div class="contact-us-content container">
         <form class="contact-us-form" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
-          <div class="form-wrapper600">
-            <label class="label-input" for="input-name">Name</label>
-            <input class="form-input form-input__name" name="name" id="input-name" type="text" placeholder="Ivan Ivanov">
+          <div class="contact-us-form__wrapper">
+            <label class="contact-us-form__label" for="input-name">Name</label>
+            <input class="contact-us-form__input contact-us-form__input_name" name="name" id="input-name" type="text" placeholder="Ivan Ivanov">
           </div>
-          <div class="form-container">
-            <div class="form-wrapper290">
-              <label class="label-input" for="input-phone">Phone</label>
-              <input class="form-input" name="phone" id="input-phone" type="tel">
+          <div class="contact-us-form__container">
+            <div class="contact-us-form__wrapper-column">
+              <label class="contact-us-form__label" for="input-phone">Phone</label>
+              <input class="contact-us-form__input" name="phone" id="input-phone" type="tel">
             </div>
-            <div class="form-wrapper290">
-              <label class="label-input" for="input-email">Email</label>
-              <input class="form-input" name="email" id="input-email" type="email">
+            <div class="contact-us-form__wrapper-column">
+              <label class="contact-us-form__label" for="input-email">Email</label>
+              <input class="contact-us-form__input" name="email" id="input-email" type="email">
             </div>
           </div>          
-          <div class="form-wrapper600"> 
-            <label class="label-input" for="input-massage">Massage</label>
-            <textarea class="form-input" name="message" id="input-massage" cols="30" rows="6"></textarea>
+          <div class="contact-us-form__wrapper"> 
+            <label class="contact-us-form__label" for="input-massage">Massage</label>
+            <textarea class="contact-us-form__input" name="message" id="input-massage" cols="30" rows="6"></textarea>
           </div>
-          <div class="form-checkbox-wrapper">
-            <input class="input-form-checkbox opacity" name="accept" id="form-accept" type="checkbox" value="accept">
-            <label class="form-label form-checkbox-indicator" for="form-accept">By clicking on the button, you consent to the processing of your personal data</label>
+          <div class="contact-us-form__wrapper-checkbox">
+            <input class="contact-us-form__input-checkbox opacity" name="accept" id="form-accept" type="checkbox" value="accept">
+            <label class="contact-us-form__label contact-us-form__label_indicator" for="form-accept">By clicking on the button, you consent to the processing of your personal data</label>
           </div>
-          <button class="button-form button" type="submit">SUBMIT</button>
+          <button class="contact-us-form__button-form button" type="submit">Submit</button>    
         </form>
         <div class="contact-us-text-block">
-          <p class="contact-us-text">Our support team are on-hand to assist with any issues you are experiencing.</p>
-          <p class="contact-us-text">Please use the form to contact us with your needs. Send us a message and we'll respond as soon as possible.</p>
-          <p class="contact-us-bigtext">An expert is waiting to help you!</p>
+          <p class="contact-us-text-block__text">Our support team are on-hand to assist with any issues you are experiencing.</p>
+          <p class="contact-us-text-block__text">Please use the form to contact us with your needs. Send us a message and we'll respond as soon as possible.</p>
+          <p class="contact-us-text-block__text-info">An expert is waiting to help you!</p>
         </div>
       </div>          
     </main>

@@ -1,0 +1,44 @@
+.breadcrumbs {
+  margin-top: 9px;
+  margin-bottom: 25px;
+
+  &__title {
+    font-family: 'Montserrat' , sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 49px;
+    margin: 0 0 16px 0;
+    text-transform: uppercase;
+  }
+  
+  &__list {
+    padding: 0;
+    display: flex;
+    margin: 16px 0 0 0;
+  }
+  
+  &__item {
+    margin-right: 20px;
+    font-family: 'Crimson Text' , serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  
+  &__page { 
+    opacity: 0.5;
+  }
+  
+  &__link {
+    transition: 0.3s;
+  }
+  
+  &__link:hover, &__link:focus {
+    opacity: 0.8;
+  }
+  
+  &__link:active {
+    opacity: 0.6;
+  }
+}

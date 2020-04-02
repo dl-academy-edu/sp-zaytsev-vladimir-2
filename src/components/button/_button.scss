@@ -4,7 +4,7 @@
   font-size: 16px;
   line-height: 22px;
   background-color: #000000;
-  color: #FFFFFF;
+  color: $whiteColor;
   border: 0;
   padding: 9px 22px;  
   text-align: center;
@@ -13,11 +13,15 @@
   transition: 0.3s;
 }
 
+.button:disabled {
+  background-color: #C1C1C1;
+}
+
 .button:hover, .button:focus {  
-  background-color: #C29974; 
+  background-color: $brownColor;   
 }
 
 .button:active {
   cursor: none;
-  background-color:#CFAF91;
+  background-color:$brownActiveColor;
 }

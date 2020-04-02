@@ -1,54 +1,69 @@
 .header {
   padding: 50px 0;
   display: flex;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;
+  }
+
+  &__nav-list {
+    display: flex;
+    margin-left: 60px;
+    padding-left: 0;    
+  }
+
+  &__nav-item {
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+    margin-right: 20px;  
+  }
+
+  &__contact-list {
+    display: flex;
+    justify-content: space-between;  
+  }
+
+  &__contact-link{
+    font-weight: bold;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+  }
+
+  &__search-link {
+    margin-right: 24px; 
+  }
+
+  &__logo-link, &__nav-link, &__search-link, &__contact-link{  
+    transition: 0.4s;
+    
+  }
+
+  &__logo-link:hover, &__logo-link:focus, &__nav-link:hover, &__nav-link:focus, &__contact-link:hover, &__contact-link:focus,  &__search-link:hover, &__search-link:focus {
+    opacity: 0.5;
+  }
+
+  &__logo-link:active, &__nav-link:active, &__contact-link:active, &__search-link:active {
+    opacity: 0.3;
+  }
 }
 
-.header-nav {
-  display: flex;
-  justify-content: space-between; 
-  width: 100%;
-}
 
-.header-nav-list {
-  display: flex;
-  margin-left: 60px;
-  padding-left: 0;    
-}
 
-.header-contact-list {
-  display: flex;
-  justify-content: space-between;  
-}
 
-.header-nav-item {
-  font-size: 14px;
-  line-height: 19px;
-  color: #000000;
-  margin-right: 20px;  
-}
 
-.header-contact-link{
-  font-weight: bold;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 19px;
-  text-transform: uppercase;
-}
 
-.header-search-link {
-  margin-right: 24px;
-}
 
-.header-logo-link, .header-nav-link, .header-search-link, .header-contact-link{  
-  transition: 0.2s;
-}
 
-.header-logo-link:hover, .header-logo-link:focus, .header-nav-link:hover , .header-nav-link:focus, .header-contact-link:hover, .header-contact-link:focus,  .header-search-link:hover, .header-search-link:focus {
-  opacity: 0.5;
-}
 
-.header-logo-link:active, .header-nav-link:active, .header-contact-link:active, .header-search-link:active {
-  opacity: 0.3;
-}
+
+
+
+
+
 
 
