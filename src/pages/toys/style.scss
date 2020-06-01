@@ -1,8 +1,4 @@
-$blackColor: #1E0606;
-$blueColor: #E1F0F7;
-$brownColor: #C29974;
-$brownActiveColor: #CFAF91;
-$whiteColor: #FFFFFF;
+@import "../../components/color";
 
 .toy-filter {
   margin-top: 35px;
@@ -13,6 +9,12 @@ $whiteColor: #FFFFFF;
     justify-content: space-between;
     align-items: flex-start;
     padding: 42px 0;
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      padding: 30px 60px;
+      width: 100%;
+      flex-wrap: wrap;
+    }
   }
   
   &__cost-name, &__color-name,
@@ -22,6 +24,7 @@ $whiteColor: #FFFFFF;
     font-size: 16px;
     line-height: 22px;
     padding: 0;
+    
   }
   
   &__color-list, &__shipping-list, &__amount-list {
@@ -143,18 +146,29 @@ $whiteColor: #FFFFFF;
 .toy-content {
   padding: 50px 0 47px 0;
 
+  @media (min-width: 768px) and (max-width: 1023px) {
+    padding: 40px 60px 37px 60px;
+  }
+
   &__list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0 -10px 27px -10px;
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+    }
   }
   
   &__preview {
     max-width: 33.33%;
-    margin: 10px;
+    padding: 10px;
     block-size: border-box;
     position: relative;
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      max-width: 202px;
+    }
   } 
   
   &__preview-image {
@@ -164,6 +178,10 @@ $whiteColor: #FFFFFF;
   &__preview-text {
     
     padding: 27px 0 25px 0;
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      padding: 15px 0 20px 0;
+    }
   }
   
   &__preview-name {
@@ -171,6 +189,12 @@ $whiteColor: #FFFFFF;
     line-height: 19px;
     text-align: center;
     margin: 0 0 16px 0;
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      margin: 0 0 5px 0;
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
   
   &__preview-price {
@@ -179,6 +203,11 @@ $whiteColor: #FFFFFF;
     line-height: 22px;
     text-align: center;
     margin: 0;
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
   
   &__preview-learn-more-text {

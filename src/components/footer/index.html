@@ -43,14 +43,17 @@
     </div>
     <div class="footer__block-information footer__block-information_top-line">
       <div class="footer__section-information footer__stars-block">
-        <p class= "footer__star-text">Company Rating</p>
-        <ul class="footer__stars-list list-hidden-marker">
-          <li class="footer__star-item"><button class="footer__star-button" type="button"><img class="footer__star-image" src="/static/images/star.svg" alt="star"></button></li>
-          <li class="footer__star-item"><button class="footer__star-button" type="button"><img class="footer__star-image" src="/static/images/star.svg" alt="star"></button></li>
-          <li class="footer__star-item"><button class="footer__star-button" type="button"><img class="footer__star-image" src="/static/images/star.svg" alt="star"></button></li>
-          <li class="footer__star-item"><button class="footer__star-button" type="button"><img class="footer__star-image" src="/static/images/star.svg" alt="star"></button></li> 
-          <li class="footer__star-item"><button class="footer__star-button" type="button"><img class="footer__star-image" src="/static/images/star.svg" alt="star"></button></li> 
-        </ul>
+        <label class="footer__star-text ">Company Rating</label>
+        <input class="footer__input-star opacity" type="radio" id="input-star-1" name="star" value="1">
+        <label class="footer__label-star" for="input-star-1">@@include('star/index.html')</label>        
+        <input class="footer__input-star opacity" type="radio" id="input-star-2" name="star" value="2">
+        <label class="footer__label-star" for="input-star-2">@@include('star/index.html')</label>        
+        <input class="footer__input-star opacity" type="radio" id="input-star-3" name="star" value="3">
+        <label class="footer__label-star" for="input-star-3">@@include('star/index.html')</label>        
+        <input class="footer__input-star opacity" type="radio" id="input-star-4" name="star" value="4">
+        <label class="footer__label-star" for="input-star-4">@@include('star/index.html')</label>        
+        <input class="footer__input-star opacity" type="radio" id="input-star-5" name="star" value="5">
+        <label class="footer__label-star" for="input-star-5">@@include('star/index.html')</label>          
       </div>
       <p class="footer__section-information footer__copyright-info">Copyright © 2018 Dlk • Design Life Kids</p>
       <a class="footer__section-information footer__dl-info" href="#">Web Design — Direct Line Development</a>

@@ -1,9 +1,4 @@
-$blackColor: #1E0606;
-$blueColor: #E1F0F7;
-$brownColor: #C29974;
-$brownActiveColor: #CFAF91;
-$whiteColor: #FFFFFF;
-
+@import "../../components/color";
 
 .blog {
 
@@ -14,17 +9,33 @@ $whiteColor: #FFFFFF;
   &__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
     margin: 15px -10px 0 -10px;
+    padding: 0;
+
+    @media (min-width: 320px) and (max-width: 1316px) {
+      flex-wrap: wrap;
+      
+    }
   }
   
   &__preview {
-    width: 33.33%;
-    padding: 10px;
-    box-sizing: border-box;
-    margin-top: 14px;
+    width: 380px;
+    padding: 0 10px;
+    margin: 14px 0 0 0;
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      width: 314px;
+    }
+
+    @media (min-width: 320px) and (max-width: 767px) {
+      width: 335px;
+    }
   }
   
-  &__preview-link:hover &__preview-title, &__preview-link:active &__preview-title, &__preview-link:focus &__preview-title {
+  &__preview-link:hover &__preview-title,
+  &__preview-link:active &__preview-title, 
+  &__preview-link:focus &__preview-title {
     cursor: pointer;
     text-decoration: underline;
   }
@@ -66,6 +77,11 @@ $whiteColor: #FFFFFF;
   justify-content: space-between;
   align-items: center;
 
+  @media (min-width: 320px) and (max-width: 767px) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
   &__list {
     display: flex;
     padding: 0;  
@@ -74,13 +90,18 @@ $whiteColor: #FFFFFF;
   
   &__item {
     margin-right: 64px;
+
+    @media (min-width: 320px) and (max-width: 767px) {
+      margin-right: 52px;
+    }
   }
   
   &__link_default {
     color: $brownColor;
   }
   
-  &__control:hover &__vector, &__control:focus &__vector{
+  &__control:hover &__vector, 
+  &__control:focus &__vector{
     stroke: #C29974;
     stroke-opacity: 1;
     cursor: pointer;
@@ -92,7 +113,8 @@ $whiteColor: #FFFFFF;
     cursor: none;
   }
   
-  &__link:hover , &__link:focus{
+  &__link:hover , 
+  &__link:focus{
     color: $blackColor;
     opacity: 0.5;
     cursor: pointer;

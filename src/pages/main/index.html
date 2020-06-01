@@ -1,10 +1,11 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link href="/common.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-    <title>Главная</title>
+    <title>DESIGN LIFE KIDS</title>
   </head>
   <body>
     @@include('header/index.html')
@@ -31,7 +32,15 @@
                 })
               </div>          
               <h2 class="hidden">Slider</h2>          
-              <img class="sliders__slider-1-image" src="static/images/slider.png" alt="slider">          
+              <picture>
+                <source srcset="static/images/slider-mobile.png"
+                        media="(max-width: 767px)">
+                <source srcset="static/images/slider-tablet.png"
+                        media="(max-width: 1223px)">
+                <source srcset="static/images/slider.png"
+                        media="(min-width: 1224px)">
+                <img class="sliders__slider-1-image" src="static/images/slider.png" alt="slider">
+              </picture>          
             </div>        
             <!--<div class="slider-2">
               <div class="slider-desc">
@@ -105,10 +114,18 @@
           <button class="product__desception-button"><img class="product__desception-vector" width="37" height="37" src="static/images/vector-1.svg" alt="vector"></button>
           <button class="product__desception-button"><img class="product__desception-vector" width="37" height="37" src="static/images/vector-2.svg" alt="vector"></button>
           <p class="product__desception-text">Modern finds for the modern home. Curated goods by unique designers around the world from fashion to furniture for kids and adults.</p>
-        </div>  
+        </div>         
       </section>
-      <section class="delivery container">        
-        <img class="delivery__image" width="480" height="559" src="static/images/delivery.png" alt="delivery">
+      <section class="delivery container">
+        <picture>
+          <source srcset="static/images/delivery.png 2x"
+                  media="(max-width: 767px)"> 
+          <source srcset="static/images/delivery-tablet.png"
+                  media="(max-width: 1023px)">
+          <source srcset="static/images/delivery.png"
+                  media="(min-width: 1024px)">               
+          <img class="delivery__image" src="static/images/delivery.png" alt="delivery">
+        </picture>       
         <div class="delivery__text-block">
           <h2 class="delivery__title title-2">DELIVERY</h2>        
           <ul class="delivery__list list-hidden-marker">
@@ -127,13 +144,53 @@
       <section class="partner container">
         <h2 class="partner__title hidden">Partners</h2>
         <ul class="partner__list list-hidden-marker">
-          <li class="partner__item"><a class="partner__link" href="#"><img class="parnter__image" src="static/images/partner-1.png" width="193" height="60" alt="mail"></a></li>
-          <li class="partner__item"><a class="partner__link" href="#"><img class="parnter__image" src="static/images/partner-2.png" width="179" height="61" alt="apple"></a></li>
-          <li class="partner__item"><a class="partner__link" href="#"><img class="parnter__image" src="static/images/partner-3.png" width="216" height="46" alt="eltex"></a></li>
-          <li class="partner__item"><a class="partner__link" href="#"><img class="parnter__image" src="static/images/partner-4.png" width="211" height="40" alt="owox"></a></li>
+          <li class="partner__item partner__item_1">
+            <a class="partner__link" href="#">
+              <picture>
+                <source srcset="static/images/partner-1-tablet.png"
+                  media="(max-width: 639px)">
+                  <source srcset="static/images/partner-1-mobile.png"
+                  media="(max-width: 1023px)">
+                <img class="parnter__image" src="static/images/partner-1.png" alt="mail">
+              </picture>
+            </a>
+          </li>
+          <li class="partner__item partner__item_2">
+            <a class="partner__link" href="#">
+              <picture>
+                <source srcset="static/images/partner-2-tablet.png"
+                  media="(max-width: 639px)">
+                <source srcset="static/images/partner-2-mobile.png"
+                  media="(max-width: 1023px)">  
+                <img class="parnter__image" src="static/images/partner-2.png" alt="apple">
+              </picture>
+            </a>
+          </li>
+          <li class="partner__item partner__item_3">
+            <a class="partner__link" href="#">
+              <picture>
+                <source srcset="static/images/partner-3-tablet.png"
+                  media="(max-width: 639px)">
+                <source srcset="static/images/partner-3-mobile.png"
+                  media="(max-width: 1023px)"> 
+                <img class="parnter__image" src="static/images/partner-3.png" alt="eltex">
+              </picture>
+            </a>
+          </li>
+          <li class="partner__item partner__item_4">
+            <a class="partner__link" href="#">
+              <picture>
+                <source srcset="static/images/partner-4-tablet.png"
+                  media="(max-width: 639px)">
+                <source srcset="static/images/partner-4-mobile.png"
+                  media="(max-width: 1023px)"> 
+                <img class="parnter__image" src="static/images/partner-4.png" alt="owox">
+              </picture>
+            </a>
+          </li>
         </ul>
       </section>
-      <div class="dlk-info container">        
+      <div class="dlk-info container">
         <article class="dlk-info__about">
           <h1 class="dlk-info__about-title title-2">DESIGN LIFE KIDS</h1>
           <h3 class="dlk-info__about-subtitle">About Us</h3>
@@ -146,8 +203,8 @@
         <article class="dlk-info__map">
           <h2 class="dlk-info__map-title title-2">CONTACTS</h2>
           <p class="dlk-info__map-text">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
-          <img class="dlk-info__map-image" width="483" height="196" src="static/images/map.png" alt="map">
-        </article>
+          <iframe class="dlk-info__map-image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.535756574421!2d49.28813631615619!3d53.51248798001424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41687981eb77e79b%3A0xc6236db15e1d074e!2z0L_RgC4g0KHRgtC10L_QsNC90LAg0KDQsNC30LjQvdCwLCA0NCwg0KLQvtC70YzRj9GC0YLQuCwg0KHQsNC80LDRgNGB0LrQsNGPINC-0LHQuy4sIDQ0NTAyNw!5e0!3m2!1sru!2sru!4v1587546631216!5m2!1sru!2sru"></iframe>
+        </article>        
       </div>
     </main>
     @@include('footer/index.html')

@@ -1,6 +1,5 @@
 .breadcrumbs {
   margin-top: 9px;
-  margin-bottom: 25px;
 
   &__title {
     font-family: 'Montserrat' , sans-serif;
@@ -10,6 +9,16 @@
     line-height: 49px;
     margin: 0 0 16px 0;
     text-transform: uppercase;
+
+    @media (min-width: 640px) and (max-width: 1023px) {
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    @media (min-width: 320px) and (max-width: 639px) {
+      font-size: 24px;
+      line-height: 29px;
+    }
   }
   
   &__list {
@@ -24,6 +33,11 @@
     font-style: italic;
     font-size: 20px;
     line-height: 25px;
+
+    @media (min-width: 320px) and (max-width: 639px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
   
   &__page { 

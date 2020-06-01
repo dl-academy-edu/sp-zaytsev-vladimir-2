@@ -1,0 +1,105 @@
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/common.css">
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <title>GRID</title>
+  </head>
+  <body>
+    @@include('header/index.html')
+    <main>
+      @@include('breadcrumbs/index.html', {
+        "title": "Grid",
+        "way": "Grid"
+      })
+      <section class="grid-container">
+        <div class="grid-box-1">
+          <div class="grid-box-1__text-block">
+            <p class="grid-box-1__name">IPHONE 6S</p>
+            <p class="grid-box-1__title">3D Touch. 12MP photos. 4K video. One powerful phone</p>
+            <p class="grid-box-1__text">Learn more or visit an Apple Store today</p>
+          </div>
+          <picture>
+            <source srcset="/static/images/grid-image-1-mobile.png"
+                    media="(max-width: 767px)">
+            <source srcset="/static/images/grid-image-1.png"
+                    media="(min-width: 1024px)">
+            <img class="grid-box-1__image" src="/static/images/grid-image-1.png" alt="phone">
+          </picture>               
+        </div>
+        <div class="grid-box-2">
+          <a class="grid-box-2__link" href="#">LEARN MORE</a>
+          <p class="grid-box-2__text">How to Use Rotary Evaporator in Chemical Labs</p>
+          <button class="grid-box-2__button" >Download now</button>
+        </div>
+        <div class="grid-box-3">
+          <img class="grid-box-3__image" src="/static/images/grid-image-2.png" alt="keyboard">
+          <p class="grid-box-3__title">Our Brand New Keyboard</p>
+          <a class="grid-box-3__link" href="#">LEARN ›</a>
+        </div>
+        <div class="grid-box-4">          
+          <div class="grid-box-4__block">
+            <p class="grid-box-4__name">IMAC.RETINA</p>
+            <p class="grid-box-4__title">Hardly a month passes these days where</p>
+            <picture>
+              <source srcset="/static/images/grid-image-3-mobile.png"
+                      media="(max-width: 767px)">
+              <source srcset="/static/images/grid-image-3-tablet.png"
+                      media="(max-width: 1023px)">
+              <source srcset="/static/images/grid-image-3.png"
+                      media="(min-width: 1024px)">
+              <img src="/static/images/grid-image-3.png" alt="imac">
+            </picture>            
+          </div>
+          <div class="grid-box-4__block">            
+            <p class="grid-box-4__text">Apple may be experimenting in the virtual reality space. The company has been granted a patent for a head-mounted virtual reality device that would use the iPhone screen as the display.</p>
+            <a class="grid-box-4__link">DOWNLOAD NOW ›</a>
+          </div>                 
+        </div>
+        <div class="grid-box-5">
+          <img src="/static/images/grid-image-4.png" alt="disket">
+          <p class="grid-box-5__title">iCloud</p>
+          <p class="grid-box-5__text">With iCloud, you always have the latest versions of your most important things — like documents, apps, notes, and contacts — on whatever device you’re using.</p>
+          <a class="grid-box-5__link">Learn more</a>
+        </div>
+        <div class="grid-box-6">
+          <p class="grid-box-6__orange-text">Best choise</p>
+          <p class="grid-box-6__title">Much MuchBetter Experience</p>
+            <picture>
+              <source srcset="/static/images/grid-image-5-mobile.png"
+                      media="(max-width: 767px)">
+              <source srcset="/static/images/grid-image-5-tablet.png"
+                      media="(max-width: 1023px)">
+              <source srcset="/static/images/grid-image-5.png"
+                      media="(min-width: 1024px)">
+              <img src="/static/images/grid-image-5.png" alt="phone">
+            </picture>        
+        </div>
+        <div class="grid-box-7">
+          <img src="/static/images/grid-image-6.png" alt="gamepad">
+          <p class="grid-box-7__title">Games ourpasion</p>
+          <a class="grid-box-7__link">LEARN ›</a>
+        </div>
+        <div class="grid-box-8">
+          <a class="grid-box-8__link" href="#">
+            <img class="grid-box-8__image" src="/static/images/grid-image-7.png" alt="instagram">
+          </a>
+        </div>
+        <div class="grid-box-9">
+          <picture>
+            <source srcset="/static/images/grid-image-8-mobile.png"
+                    media="(max-width: 767px)">
+            <source srcset="/static/images/grid-image-8.png"
+                    media="(min-width: 768px)">
+            <img class="grid-box-9__image" src="/static/images/grid-image-8.png" alt="tv">
+          </picture> 
+          <p class="grid-box-9__title">More than just a display,  it’s a vision</p>
+        </div>
+      </section>    
+    </main>
+    @@include('footer/index.html')
+  </body>
+</html>

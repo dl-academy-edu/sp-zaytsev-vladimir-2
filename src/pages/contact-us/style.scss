@@ -1,15 +1,27 @@
-$blackColor: #1E0606;
-$blueColor: #E1F0F7;
-$brownColor: #C29974;
-$brownActiveColor: #CFAF91;
-$whiteColor: #FFFFFF;
+@import "../../components/color";
 
 .contact-us-content {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 48px;
-  margin-bottom: 60px;   
+  margin-bottom: 60px;
+  
+  @media (min-width: 768px) and (max-width: 1023px) {
+    width: 768px;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 43px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: 375px) and (max-width: 767px) {
+    width: 375px;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 50px;
+  }
 }
 
 .contact-us-form {
@@ -19,19 +31,49 @@ $whiteColor: #FFFFFF;
   background-color: #E5EAF8;
   font-family: 'Roboto' , sans-serif;
   font-size: 14px;
-  line-height: 16px;  
+  line-height: 16px; 
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    max-width: 648px;
+    padding: 42px 56px;
+    margin-right: 0;    
+  } 
+
+  @media (min-width: 375px) and (max-width: 767px) {
+    max-width: 335px;
+    padding: 25px;
+    margin-right: 0;
+    margin-top: 25px;    
+  } 
 
   &__wrapper {
     display: flex;
     flex-direction: column;
     width: 600px;
     margin-bottom: 20px;
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      width: 536px;      
+    } 
+
+    @media (min-width: 375px) and (max-width: 767px) {
+      width: 285px;      
+    } 
   }
   
   &__wrapper-column {
     display: flex;
     flex-direction: column;
     width: 290px;
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      max-width: 258px;      
+    }
+    
+    @media (min-width: 375px) and (max-width: 767px) {
+      width: 285px;
+      margin-bottom: 15px;      
+    } 
   }
   
   &__container {
@@ -39,6 +81,16 @@ $whiteColor: #FFFFFF;
     justify-content: space-between;
     margin-bottom: 20px;
     width: 600px;
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      max-width: 536px;      
+    }
+    
+    @media (min-width: 375px) and (max-width: 767px) {
+      flex-direction: column;
+      width: 285px;
+      margin-bottom: 0;      
+    } 
   }
   
   &__label {
@@ -46,6 +98,10 @@ $whiteColor: #FFFFFF;
     font-family: 'Roboto' , sans-serif;
     font-size: 14px;
     line-height: 16px;
+
+    @media (min-width:375px) and (max-width:767px) {
+      margin-bottom: 5px;
+    }
   }
   
   &__input {
@@ -86,6 +142,11 @@ $whiteColor: #FFFFFF;
     border: 2px solid $brownColor;
     box-sizing: border-box;
     border-radius: 3px;
+
+    @media (min-width:375px) and (max-width:767px) {
+      top: calc( 50% - 15px);
+      transform: inherit;
+    }
   }
   
   &__input-checkbox:checked + &__label_indicator::after {
@@ -112,10 +173,26 @@ $whiteColor: #FFFFFF;
   max-width: 380px;
   width: 100%;
 
+  @media (min-width:768px) and (max-width:1023px) {
+    max-width: 536px;
+    text-align: center;
+  }
+
+  @media (min-width:375px) and (max-width:767px) {
+    max-width: 335px;
+    text-align: center;
+  }
+
   &__text {
     margin: 0 0 20px 0;
     font-size: 16px;
     line-height: 22px;
+
+    @media (min-width:375px) and (max-width:767px) {
+      font-size: 14px;
+      line-height: 19px;
+      margin: 0 0 15px 0;
+    }
   }
   
   &__text-info {
@@ -126,6 +203,13 @@ $whiteColor: #FFFFFF;
     line-height: 34px;
     color: $brownColor;
     text-transform: uppercase;
+
+    @media (min-width:375px) and (max-width:767px) {
+      font-size: 24px;
+      line-height: 34px;
+      margin: 15px 0 0 0;
+      max-width: 329px;
+    }
   }
 }
 

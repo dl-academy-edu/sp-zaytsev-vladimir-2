@@ -85,7 +85,15 @@
           <article class="toy-content__preview">
             <h2 class="hidden">toy 1</h2>
             <a class="toy-content__preview-link" href="#">
-              <img class="toy-content__preview-image" width="380" height="385" src="/static/images/toy-1.jpg" alt="toy">
+              <picture>
+                <source srcset="/static/images/toy-1-mobile.jpg"
+                        media="(max-width: 767px)">
+                <source srcset="/static/images/toy-1-tablet.jpg"
+                        media="(max-width: 1023px)">
+                <source srcset="/static/images/toy-1.jpg"
+                        media="(min-width: 1024px)">
+                <img class="toy-content__preview-image"  src="/static/images/toy-1.jpg" alt="toy">
+              </picture>              
               <div class="toy-content__preview-learn-more">
                 <p class="toy-content__preview-learn-more-text">LEARN MORE</p>
               </div>              
@@ -98,7 +106,15 @@
           <article class="toy-content__preview">
             <h2 class="hidden">toy 2</h2>
             <a class="toy-content__preview-link" href="#">
-              <img class="toy-content__preview-image" width="380" height="385" src="/static/images/toy-2.jpg" alt="toy">
+              <picture>
+                <source srcset="/static/images/toy-2-mobile.jpg"
+                        media="(max-width: 767px)">
+                <source srcset="/static/images/toy-2-tablet.jpg"
+                        media="(max-width: 1023px)">
+                <source srcset="/static/images/toy-2.jpg"
+                        media="(min-width: 1024px)">
+                <img class="toy-content__preview-image"src="/static/images/toy-2.jpg" alt="toy">
+              </picture>              
               <div class="toy-content__preview-learn-more">
                 <p class="toy-content__preview-learn-more-text">LEARN MORE</p>
               </div>  
@@ -111,7 +127,15 @@
           <article class="toy-content__preview">
             <h2 class="hidden">toy 3</h2>
             <a class="toy-content__preview-link" href="#">
-              <img class="toy-content__preview-image" width="380" height="385" src="/static/images/toy-3.jpg" alt="toy">
+              <picture>
+                <source srcset="/static/images/toy-3-mobile.jpg"
+                        media="(max-width: 767px)">
+                <source srcset="/static/images/toy-3-tablet.jpg"
+                        media="(max-width: 1023px)">
+                <source srcset="/static/images/toy-3.jpg"
+                        media="(min-width: 1024px)">
+                <img class="toy-content__preview-image" src="/static/images/toy-3.jpg" alt="toy">
+              </picture>
               <div class="toy-content__preview-learn-more">
                 <p class="toy-content__preview-learn-more-text">LEARN MORE</p>
               </div>  
@@ -124,7 +148,15 @@
           <article class="toy-content__preview">
             <h2 class="hidden">toy 4</h2>
             <a class="toy-content__preview-link" href="#">
-              <img class="toy-content__preview-image" width="380" height="385" src="/static/images/toy-4.jpg" alt="toy">
+              <picture>
+                <source srcset="/static/images/toy-4-mobile.jpg"
+                        media="(max-width: 767px)">
+                <source srcset="/static/images/toy-4-tablet.jpg"
+                        media="(max-width: 1023px)">
+                <source srcset="/static/images/toy-4.jpg"
+                        media="(min-width: 1024px)">
+                        <img class="toy-content__preview-image"  src="/static/images/toy-4.jpg" alt="toy">
+              </picture>                            
               <div class="toy-content__preview-learn-more">
                 <p class="toy-content__preview-learn-more-text">LEARN MORE</p>
               </div>  
@@ -137,7 +169,15 @@
           <article class="toy-content__preview">
             <h2 class="hidden">toy 5</h2>
             <a class="toy-content__preview-link" href="#">
-              <img class="toy-content__preview-image" width="380" height="385" src="/static/images/toy-5.jpg" alt="toy">
+              <picture>
+                <source srcset="/static/images/toy-5-mobile.jpg"
+                        media="(max-width: 767px)">
+                <source srcset="/static/images/toy-5-tablet.jpg"
+                        media="(max-width: 1023px)">
+                <source srcset="/static/images/toy-5.jpg"
+                        media="(min-width: 1024px)">
+                <img class="toy-content__preview-image" src="/static/images/toy-5.jpg" alt="toy">
+              </picture>             
               <div class="toy-content__preview-learn-more">
                 <p class="toy-content__preview-learn-more-text">LEARN MORE</p>
               </div>  
@@ -150,7 +190,16 @@
           <article class="toy-content__preview">
             <h2 class="hidden">toy 6</h2>
             <a class="toy-content__preview-link" href="#">
-              <img class="toy-content__preview-image" width="380" height="385" src="/static/images/toy-6.jpg" alt="toy">  
+              <picture>
+                <source srcset="/static/images/toy-6-mobile.jpg"
+                        media="(max-width: 767px)">
+                <source srcset="/static/images/toy-6-tablet.jpg"
+                        media="(max-width: 1023px)">
+                <source srcset="/static/images/toy-6.jpg"
+                        media="(min-width: 1024px)">
+                        <img class="toy-content__preview-image" src="/static/images/toy-6.jpg" alt="toy">
+              </picture> 
+                
               <div class="toy-content__preview-learn-more">
                 <p class="toy-content__preview-learn-more-text">LEARN MORE</p>
               </div>              
@@ -183,5 +232,4 @@
     </main>
     @@include('footer/index.html')
   </body>
-  <script src="index.js"></script>
 </html>
