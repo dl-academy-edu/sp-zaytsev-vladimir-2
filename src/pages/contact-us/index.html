@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <title>Contact Us</title>
+  </head>
+  <body>
+    @@include('header/index.html')
+    <main class="contact-us">
+      @@include('breadcrumbs/index.html', {
+        "title": "Contact Us",
+        "way": "Contact Us"
+      })    
+      <div class="contact-us-content container">
+        <form class="contact-us-form" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
+          <div class="contact-us-form__wrapper">
+            <label class="contact-us-form__label" for="input-name">Name</label>
+            <input class="contact-us-form__input contact-us-form__input_name" name="name" id="input-name" type="text" placeholder="Ivan Ivanov">
+          </div>
+          <div class="contact-us-form__container">
+            <div class="contact-us-form__wrapper-column">
+              <label class="contact-us-form__label" for="input-phone">Phone</label>
+              <input class="contact-us-form__input" name="phone" id="input-phone" type="tel">
+            </div>
+            <div class="contact-us-form__wrapper-column">
+              <label class="contact-us-form__label" for="input-email">Email</label>
+              <input class="contact-us-form__input" name="email" id="input-email" type="email">
+            </div>
+          </div>          
+          <div class="contact-us-form__wrapper"> 
+            <label class="contact-us-form__label" for="input-massage">Massage</label>
+            <textarea class="contact-us-form__input" name="message" id="input-massage" cols="30" rows="6"></textarea>
+          </div>
+          <div class="contact-us-form__wrapper-checkbox">
+            <input class="contact-us-form__input-checkbox opacity" name="accept" id="form-accept" type="checkbox" value="accept">
+            <label class="contact-us-form__label contact-us-form__label_indicator" for="form-accept">By clicking on the button, you consent to the processing of your personal data</label>
+          </div>
+          <button class="contact-us-form__button-form button" type="submit">Submit</button>    
+        </form>
+        <div class="contact-us-text-block">
+          <p class="contact-us-text-block__text">Our support team are on-hand to assist with any issues you are experiencing.</p>
+          <p class="contact-us-text-block__text">Please use the form to contact us with your needs. Send us a message and we'll respond as soon as possible.</p>
+          <p class="contact-us-text-block__text-info">An expert is waiting to help you!</p>
+        </div>
+      </div>          
+    </main>
+    @@include('footer/index.html')
+  </body>
+</html>

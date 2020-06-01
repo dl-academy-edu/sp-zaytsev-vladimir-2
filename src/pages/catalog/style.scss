@@ -1,3 +1,121 @@
-main.catalog-main {
- padding: 30px 0;
+@import "../../components/color";
+
+.catalog-product {
+
+  &__name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+    margin: 0;
+    font-family: 'Montserrat' , sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+    text-transform: uppercase;  
+    text-shadow: 0 0 40px rgba(147, 3, 3, 0.25);
+
+    @media (min-width: 640px) and (max-width: 1099px) {
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    @media (min-width: 320px) and (max-width: 639px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+  
+  &__item {
+    position: relative;
+    padding: 0 10px;
+    margin: 10px 0;
+    width: 280px;
+    height: 270px;
+
+    @media (min-width: 464px) and (max-width: 999px) {
+      width: 202px;
+      height: 196px;
+    }
+    
+    @media (min-width: 320px) and (max-width: 464px) {
+      width: 159px;
+      height: 155px;
+      margin: 8px 0;
+      padding: 0 8px;
+    }
+  }
+  
+  &__link {
+    color: $whiteColor;
+  }
+  
+  &__link:hover > &__name, 
+  &__link:focus > &__name {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  &__link:active &__name, 
+  &__link:active{
+    cursor: none;
+    text-decoration: underline;
+  }
+  
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin: 40px -10px 0 -10px;
+    padding: 0;
+    
+    @media (min-width: 640px) and (max-width: 999px) {
+      margin: 20px -10px 0 -10px;
+    }
+  }
+  
+  &__item:nth-child(4) {
+    margin-left: 200px;
+
+    @media (min-width: 320px) and (max-width: 1316px) {
+      margin-left: 0;
+    }
+  }
+  
+  &__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+    background-color: #E1E1E1;
+  }
 }
+
+.catalog-desception {
+  margin-top: 43px;
+  margin-bottom: 60px;
+
+  &__inner {
+    max-width: 680px;
+    width: 100%;
+    margin-left: calc(100% / 12 * 2 + 4px );
+
+    @media (min-width: 320px) and (max-width: 1316px) {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  
+  &__title {
+    margin:25px 0;
+  }
+  
+  &__text {
+    margin:15px 0;
+    font-family: 'Open Sans' , sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+

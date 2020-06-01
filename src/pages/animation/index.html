@@ -1,0 +1,47 @@
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="/common.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>ANIMATION</title>
+  </head>
+  <body>
+    @@include('header/index.html')
+    <main class="animation">
+      @@include('breadcrumbs/index.html', {
+        "title":"Animation scene",
+        "way": "Animation"
+      })
+      <section class="animations">
+        <img class="animations__sky" src="/static/images/sky.jpg" alt="sky">
+        <img class="animations__city" src="/static/images/city.jpg" alt="city">
+        <img class="animations__lantern-back"  src="/static/images/lantern-1.png" alt="lantern">
+        <img class="animations__lantern-forward" src="/static/images/lantern-2.png" alt="lantern">
+        <img class="animations__taxi"  src="/static/images/taxi.png" alt="taxi">
+        <img class="animations__taxi-message" src="/static/images/message-taxi.png" alt="message taxi">
+        <img class="animations__girl" src="/static/images/girl.png" alt="girl">
+        <img class="animations__girl-message" src="/static/images/message-girl.png" alt="message girl">
+        <img class="animations__man" src="/static/images/man.png" alt="man">
+        <img class="animations__man-hand" src="/static/images/man-hand.png" alt="hand man">
+        <img class="animations__man-message" src="/static/images/message-man.png" alt="message man">
+        <img class="animations__suitcases"  src="/static/images/suitcases.png" alt="suitcases">
+        <ul class="animations__listen-car list-hidden-marker">
+          <li class="animations__item-car">
+            <img class="animations__car-one"  src="/static/images/car-1.png" alt="car">
+          </li>
+          <li class="animations__item-car">
+            <img class="animations__car-two"src="/static/images/car-2.png" alt="car">            
+          </li>
+          <li class="animations__item-car">
+            <img class="animations__car-four" src="/static/images/car-4.png" alt="car">                         
+          </li>
+          <li class="animations__item-car">
+            <img class="animations__car-three" src="/static/images/car-3.png" alt="car">              
+          </li>
+        </ul>     
+      </section>  
+    </main>    
+    @@include('footer/index.html')
+  </body>
+</html>

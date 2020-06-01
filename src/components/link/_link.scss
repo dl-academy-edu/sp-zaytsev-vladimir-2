@@ -1,0 +1,23 @@
+.button {
+  font-weight: bold;
+  font-family: 'Open Sans' , sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  background-color: #000000;
+  color: $whiteColor;
+  border: 0;
+  padding: 9px 22px;  
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover, .button:focus {  
+  background-color: $brownColor; 
+}
+
+.button:active {
+  cursor: none;
+  background-color:$brownActiveColor;
+}

@@ -1,8 +1,62 @@
-<footer>
+<footer class="footer">
   <div class="container">
-    <span class="title-block title-block_one">Footer</span>
-    <a href="/">Главная</a>
-    <a href="/pages/catalog">Каталог</a>
-    <a href="/pages/toys">Игрушки</a>
+    <div class="footer__block-content">
+      <div class="footer__section-content">
+        <p class="footer__title footer__title_bottom-line">Navigation</p>
+        <nav class="footer__navigation">
+            <ul class="footer__navigation-list list-hidden-marker">
+              <li class="footer__navigation-item"><a class="footer__navigation-link" href="#">About Us</a></li>
+              <li class="footer__navigation-item"><a class="footer__navigation-link" href="/pages/blog/index.html">Blog</a></li>
+              <li class="footer__navigation-item"><a class="footer__navigation-link" href="#">Design Services</a></li>
+              <li class="footer__navigation-item"><a class="footer__navigation-link" href="#">Featured On</a></li>
+              <li class="footer__navigation-item"><a class="footer__navigation-link" href="#">2018 Holiday Catalog</a></li>
+              <li class="footer__navigation-item"><a class="footer__navigation-link" href="#">Shop By Designer</a></li>            
+            </ul>
+        </nav>            
+      </div>
+      <div class="footer__section-content">
+        <p class="footer__title footer__title_bottom-line">Customer Information</p>
+        <nav class="footer__navigation">
+            <ul class="footer__navigation-list list-hidden-marker">
+              <li class="footer__navigation-item"><a class="footer__navigation-link" href="/pages/contact-us/index.html">Contact Us</a></li>
+              <li class="footer__navigation-item"><a class="footer__navigation-link" href="#">Sale Exclusions</a></li>
+              <li class="footer__navigation-item"><a class="footer__navigation-link" href="#">Shipping & Returns</a></li>
+              <li class="footer__navigation-item"><a class="footer__navigation-link" href="#">Terms & Conditions</a></li>
+              <li class="footer__navigation-item"><a class="footer__navigation-link" href="#">Privacy Policy</a></li>
+              <li class="footer__navigation-item"><a class="footer__navigation-link" href="#">Search</a></li>            
+            </ul>
+        </nav>            
+      </div>
+      <div class="footer__section-content">
+        <p class="footer__title footer__title_bottom-line">Connect</p>
+        <form class="footer__form">
+          <input class="footer__input" type="email" placeholder="Email"> 
+          <button class="footer__button button" type="submit" value="join">JOIN</button>              
+        </form>
+        <ul class="footer__socials-list list-hidden-marker">
+          <li class="footer__socials-item"><a class="footer__socials-link footer__socials-link_facebook" href="#"><span class="hidden">Facebook</span></a></li>
+          <li class="footer__socials-item"><a class="footer__socials-link footer__socials-link_twitter" href="#"><span class="hidden">Twitter</span></a></li>
+          <li class="footer__socials-item"><a class="footer__socials-link footer__socials-link_pinterest" href="#"><span class="hidden">Pinteres</span></a></li>
+          <li class="footer__socials-item"><a class="footer__socials-link footer__socials-link_instagram" href="#"><span class="hidden">Instagramm</span></a></li>
+        </ul>            
+      </div> 
+    </div>
+    <div class="footer__block-information footer__block-information_top-line">
+      <div class="footer__section-information footer__stars-block">
+        <label class="footer__star-text ">Company Rating</label>
+        <input class="footer__input-star opacity" type="radio" id="input-star-1" name="star" value="1">
+        <label class="footer__label-star" for="input-star-1">@@include('star/index.html')</label>        
+        <input class="footer__input-star opacity" type="radio" id="input-star-2" name="star" value="2">
+        <label class="footer__label-star" for="input-star-2">@@include('star/index.html')</label>        
+        <input class="footer__input-star opacity" type="radio" id="input-star-3" name="star" value="3">
+        <label class="footer__label-star" for="input-star-3">@@include('star/index.html')</label>        
+        <input class="footer__input-star opacity" type="radio" id="input-star-4" name="star" value="4">
+        <label class="footer__label-star" for="input-star-4">@@include('star/index.html')</label>        
+        <input class="footer__input-star opacity" type="radio" id="input-star-5" name="star" value="5">
+        <label class="footer__label-star" for="input-star-5">@@include('star/index.html')</label>          
+      </div>
+      <p class="footer__section-information footer__copyright-info">Copyright © 2018 Dlk • Design Life Kids</p>
+      <a class="footer__section-information footer__dl-info" href="#">Web Design — Direct Line Development</a>
+    </div> 
   </div>
-</footer>
+</footer> 

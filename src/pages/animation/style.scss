@@ -1,0 +1,331 @@
+@keyframes animations__taxi {
+  
+  from {
+    right: -100%;   
+  }
+  
+  60% {
+    right: 398px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes animations__car-one {
+  0%, 100%  {
+    left: -5%;
+    top: 560px;   
+  }
+
+  55% {
+    left:110%;
+    top:560px;
+  }
+
+  65% {
+    top:-30%;
+    left:110%;
+  }
+
+  75% {
+    top:-30%;
+    left:-16%;
+  }  
+
+  90% {
+    top: 560px;
+    left:-16%;
+  }
+}
+
+@keyframes animations__car-two {
+  0%, 100% {
+    left:30%;
+    top: 550px;
+  }
+
+  55% {
+    left:110%;
+    top: 550px;
+  }
+
+  65% {
+    top: -30%;
+    left:110%;
+  }
+
+  70% {
+    top:-30%;
+    left:-16%
+  }
+
+  80% {
+    top: 550px;
+    left:-16%;
+  }
+
+}
+
+@keyframes animations__car-three {
+  0%, 100% {
+    top: 610px; 
+    left:40%;
+  }
+
+  55% {
+    top: 610px; 
+    left:80%;
+  }
+
+  65% {
+    top: 610px; 
+    left:116%;
+  }
+
+  70% {
+    top: -30%; 
+    left:116%;
+  }
+
+  75% {
+    top: -30%; 
+    left:-16%;
+  }
+
+  80% {
+    top: 610px; 
+    left:-16%;
+  }
+
+  85% {
+    top: 610px; 
+    left:20%;
+  }
+}
+
+@keyframes animations__car-four {
+  0%, 100% {
+    top: 540px;
+    left: 70%;
+  }
+
+  20% {
+    top: 540px;
+    left: 110%;
+  }
+
+  25% {
+    top: -30%;
+    left: 110%;
+  }
+
+  35% {
+    top: -30%;
+    left: -16%;
+  }
+  
+  40% {
+    top: 540px;
+    left: -16%;
+  }
+
+  50% {
+    top: 540px;
+    left: 30%;
+  }
+}
+
+@keyframes animations__man-message {
+  0%, 100% {
+  opacity: 0;
+  }
+  
+  20%, 80% {
+  opacity: 1;
+  }
+}
+
+@keyframes animations__man-hand {
+  0%, 100% {
+  transform: rotateZ(100deg);
+  }
+
+  50% {
+  transform: rotateZ(0);
+  }
+}
+
+@keyframes animations__girl-message {
+  0%, 100% {
+  opacity: 0;
+  }
+  
+  20%, 80% {
+  opacity: 1;
+  }
+}
+
+@keyframes animations__taxi-message {    
+  0%, 100% {
+  opacity: 0;
+  }
+  
+  20%, 80% {
+  opacity: 1;
+  }
+}
+
+
+.animations {
+  width: 100%;
+  margin: 50px 0 70px 0;
+  position: relative;
+  overflow: hidden;
+
+  &__listen-car {
+    z-index: 1;
+  }
+  
+  &__sky {
+    width: 100%;
+  }
+  
+  &__city {
+    width: 100%;
+  }
+  
+  &__lantern-back {
+    position: absolute;
+    top: 330px;
+    left: 632px;
+    z-index: 2;
+  }
+  
+  &__lantern-forward {
+    position: absolute;
+    bottom: 70px;
+    right: 320px;
+    z-index: 4;
+  }
+  
+  &__taxi {
+    position: absolute;
+    z-index: 3;
+    bottom: 130px;
+    animation: animations__taxi 8s;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+  }
+
+  &__taxi-message {
+    left: 51%;
+    bottom: 380px;
+    opacity: 0;
+    position: absolute;
+    animation: animations__taxi-message 2s;
+    animation-delay: 4s;
+    animation-iteration-count: 1;
+    z-index: 3;
+    }
+    
+    
+  
+  &__girl {
+    position: absolute;
+    bottom: 49px;
+    left: 300px;  
+    z-index: 4;
+  }
+
+  &__girl-message {
+    z-index: 3;
+    left: 198px;
+    bottom: 350px;
+    opacity: 0;
+    position: absolute;
+    animation: animations__girl-message 2s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+  }   
+  
+  &__man {
+    position: absolute;
+    bottom: 50px;
+    left: 410px;
+    z-index: 4;
+  }
+
+  &__man-message {
+    z-index: 3;
+    left: 398px;
+    bottom: 400px;
+    opacity: 0;
+    position: absolute;
+    animation: animations__man-message 4s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+  }
+
+  &__man-hand {
+    z-index: 3;
+    position: absolute;
+    left: 415px;
+    bottom: 310px;    
+    animation: animations__man-hand 3s;
+    animation-iteration-count: 1;
+    animation-delay: 3s;
+    transform: rotateZ(100deg);
+    transform-origin: 17% 87%;
+    } 
+  
+  
+  &__suitcases {
+    position: absolute;
+    bottom: 49px;
+    left:290px;
+    z-index: 5;
+  }
+  
+  &__car-one {
+    position: absolute;
+    z-index: 1;
+    top: 560px;
+    left:-5%;
+    animation: animations__car-one 7s;
+    animation-iteration-count: infinite;  
+    animation-timing-function: linear;
+  }
+  
+  &__car-two {
+    position: absolute;
+    z-index: 1;
+    top: 550px;
+    left:20%;
+    animation: animations__car-two 8s ;
+    animation-iteration-count: infinite;  
+    animation-timing-function: linear;
+  }
+  
+  &__car-three {
+    position: absolute;
+    z-index: 1;
+    top: 610px; 
+    left:40%;
+    animation: animations__car-three 9s;
+    animation-iteration-count: infinite;  
+    animation-timing-function: linear;
+  }
+  
+  &__car-four {
+    position: absolute;
+    z-index: 1;
+    top: 540px;
+    left: 80%;
+    animation: animations__car-four 8s;
+    animation-iteration-count: infinite;  
+    animation-timing-function: linear;
+  }
+}
+

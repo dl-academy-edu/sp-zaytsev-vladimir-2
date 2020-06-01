@@ -1,0 +1,33 @@
+.button {
+  font-weight: bold;
+  font-family: 'Open Sans' , sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  background-color: #000000;
+  color: $whiteColor;
+  border: 0;
+  padding: 9px 22px;  
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+
+  @media (min-width: 320px) and (max-width: 639px) {
+    font-size: 14px;
+    line-height: 19px;
+    padding: 8px 20px;
+  }
+}
+
+.button:disabled {
+  background-color: #C1C1C1;
+}
+
+.button:hover, .button:focus {  
+  background-color: $brownColor;   
+}
+
+.button:active {
+  cursor: none;
+  background-color:$brownActiveColor;
+}

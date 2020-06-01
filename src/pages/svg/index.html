@@ -1,0 +1,50 @@
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/common.css">
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <title>SVG</title>
+  </head>
+  <body>
+    @@include('header/index.html')
+    <main class="SVG container">
+      @@include('breadcrumbs/index.html', {
+        "title": "SVG",
+        "way": "SVG"
+      })   
+      <svg class="svg-image" widht="458" height="391" viewbox="0 0 458 391" fill="none">
+        <path fill="#CCD1D9" d="M 35 20 C 25.5 20, 20 25.5, 20 35 L 20 47 L 438 47 L 438 35 C 438 25.5, 432.5 20, 423 20, Z"/>
+        <rect fill="#545C66" x="20" y="47" width="22" height="324" />
+        <rect fill="#656D78" x="42" y="47" width="187" height="324" />
+        <rect class="svg-image__window" fill="#E6E9ED" x="229" y="47" width="209" height="324" />
+        <path class="svg-image__sky" fill="#5D9CEC" d="M 229 67 L 229 189 L 411 189 C 414.87 189, 418 185.87, 418 182 L 418 74 C 418 70.13, 414.87 67, 411 67, Z"/>
+        <rect class="svg-image__sky" fill="#5D9CEC" x="249" y="208" width="169" rx="7" ry="7" height="88" />        
+        <path fill="#545C66" d="M 246 189 L 348.5 189 L 298.93 134.47 C 297.46 132.96, 296.44 133, 296 133 C 295.56 133, 294.54 132.96, 293.17 134.4, Z"/>
+        <path fill="#656D78" d="M 282.5 189 L 405.5 189 L 347 115 C 345 112.94, 343.6 113, 343 113 C 342.4 113, 341 112.94, 339.13 115, Z"/>
+        <circle class="svg-image__sun" fill="#FFCE54" cx="283" cy="235.5" r="11"/>
+        <path fill="#545C66" d="M 293.5 296 L 358.5 296 L 331 256 C 329.25 254, 327.1 254,326.5 254 C 325.9 254, 323.75 254, 322 256, Z" />
+        <path fill="#656D78" d="M 320 296 L 406 296 L 368 243 C 366.25 241, 364.1 241, 363.5 241 C 362.9 241, 360.75 241, 359 243, Z"/>        
+        <rect fill="#CCD1D9" x="248" y="309" width="170" height="15" rx="7" ry="7"/>
+        <rect fill="#CCD1D9" x="248" y="336" width="96" height="15" rx="7" ry="7"/>
+        <rect fill="#5D9CEC" x="60" y="67" width="143" height="15" rx="7" ry="7"/>
+        <rect fill="#A0D468" x="73" y="94" width="144" height="15" rx="7" ry="7"/>
+        <rect fill="#ED5565" x="87" y="121" width="44" height="15" rx="7" ry="7"/>
+        <path fill="#ED5565" d="M 148 121 C 144.13 121, 141 124.13, 141 128 C 141 131.87, 144.13 135, 148 135 L 229 135 L 229 121, Z"/>
+        <path fill="#FFCE54" d="M 107 148 C 103.13 148, 100 151.13, 100 155 C 100 158.87, 103.13 162, 107 162 L 229 162 L 229 148, Z"/>
+        <rect fill="#CCD1D9" x="100" y="174" width="90" height="15" rx="7" ry="7"/>
+        <rect fill="#CCD1D9" x="100" y="201" width="36" height="15" rx="7" ry="7"/>
+        <path fill="#CCD1D9" d="M 154 201 C 150.13 201, 147 204.13, 147 208 C 147 211.87, 150.13 215, 154 215 L 229 215 L 229 201, Z"/>
+        <path fill="#CCD1D9" d="M 107 228 C 103.13 228, 100 231.13, 100 235 C 100 238.87, 103.13 242, 107 242 L 229 242 L 229 228, Z"/>
+        <rect fill="#FFCE54" x="100" y="255" width="103" height="15" rx="7" ry="7"/>
+        <rect fill="#ED5565" x="87" y="282" width="76" height="15" rx="7" ry="7"/>
+        <rect fill="#A0D468" x="73" y="309" width="110" height="15" rx="7" ry="7"/>
+        <rect fill="#5D9CEC" x="60" y="336" width="56" height="15" rx="7" ry="7"/>
+
+      </svg>
+    </main>
+    @@include('footer/index.html')
+  </body>
+</html>

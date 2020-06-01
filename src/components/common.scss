@@ -1,27 +1,88 @@
 // Подключение компонентов
-@import "./header/header";
-@import "./footer/footer";
-
-body {
-  font-family: Oswald, sans-serif;
-}
-
 .container {
   width: 100%;
-  max-width: 1180px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 110px;
+  box-sizing: border-box;
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    padding: 0 60px;
+    max-width: 768px;
+  }
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    padding: 0 20px;
+    max-width: 375px;
+  }
 }
 
-.title-block {
-  margin: 0 0 20px 0;
+@import "./color";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+@import "./header/header";
+@import "./footer/footer";
+@import "./popup/popup";
+@import "./button/button";
+@import "./link/link";
+@import "./breadcrumbs/breadcrumbs";
+@import "./mixin";
 
-  &_one {
-    font-size: 30px;
-    text-transform: uppercase;
+$blackColor: #1E0606;
+$blueColor: #E1F0F7;
+$brownColor: #C29974;
+$brownActiveColor: #CFAF91;
+$whiteColor: #FFFFFF;
+
+body {
+  font-family: 'Open Sans' , sans-serif;
+  font-weight: normal;
+  color: $blackColor;
+  background-color: $whiteColor;
+}
+
+a {
+  text-decoration: none;
+  color: $blackColor;
+}
+
+
+
+.list-hidden-marker {
+  list-style-type: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.opacity {
+  opacity: 0;
+}
+
+.fieldset-border-none {
+  border: none;
+  width: fit-content;
+  padding: 0;
+}
+
+.title-2 {
+  font-family: 'Montserrat' , sans-serif;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 46px;  
+  text-transform: uppercase;
+
+  @media (min-width: 640px) and (max-width: 1023px) {
+    font-size: 36px;
+    line-height: 44px; 
   }
-  &_two {
-    font-size: 25px;
-    max-width: 500px;
+
+  @media (min-width: 0px) and (max-width: 639px) {
+    font-size: 24px;
+    line-height: 29px; 
   }
 }

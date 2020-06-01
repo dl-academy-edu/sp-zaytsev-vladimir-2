@@ -1,0 +1,54 @@
+@keyframes sun {
+  0% {
+    fill: #FFCE54;
+  }
+
+  50% {
+    fill: #CCD1D9;
+  }
+  100% {
+    fill: #FFCE54;
+  }
+}
+
+@keyframes sky {
+  0% {
+    fill: #5D9CEC;
+  }
+
+  50% {
+    fill:#00063b;
+  }
+
+  100% {
+    fill :#5D9CEC;
+  }
+}
+
+@keyframes window {
+  0% {
+    fill: #E6E9ED;
+  }
+
+  50% {
+    fill:#000;
+  }
+
+  100% {
+    fill :#E6E9ED;
+  }
+}
+
+.svg-image {
+  &__sun {
+    animation: sun 5s infinite;
+  }
+
+  &__sky {
+    animation: sky 5s infinite;
+  }
+
+  &__window {
+    animation: window 5s infinite;
+  }
+}
